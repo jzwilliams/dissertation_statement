@@ -1,0 +1,53 @@
+\documentclass{dissertation_statement}
+\usepackage{otherpackages}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Frontmatter order:
+%   half-title (recto); verso blank
+%   title (recto); copyright (verso) [ABSTRACT SIGNATURE TITLE SKIPPED!]
+%   dedication (recto)/epigraph (verso)
+%   contents
+%   preface/acknowledgements
+%   somewhere in here is the list of figures and tables
+
+\frontmatter
+
+% Use a different page style for the frontmatter
+{\pagestyle{fronts}
+
+\titlehalf
+
+\titlemain
+
+\include{00-1_dedication}
+}
+
+\tableofcontents
+
+\clearpage
+
+\listoftables
+
+\listoffigures
+
+\include{00-2_abstract}
+
+\include{00-3_preface}
+
+\mainmatter
+
+\include{01_content}
+
+\backmatter
+
+\printbibliography
+
+\include{bio}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

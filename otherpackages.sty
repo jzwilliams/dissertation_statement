@@ -1,0 +1,28 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%     Put packages and macros for content, rather than design, here      %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{otherpackages}[2023/03/24 Home for dissertation packages]
+
+
+% Math and physics typesetting (used as an example)
+\RequirePackage{amsmath}
+\RequirePackage{mathtools}
+
+% These macros act somewhat like the physics package
+\DeclarePairedDelimiter\bra{\langle}{\rvert}           % <a|
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}           % |a>
+\DeclarePairedDelimiterX\ip[1]{\langle}{\rangle}
+  {#1 \delimsize| #1}                                  % <a|a>
+\DeclarePairedDelimiterX\op[1]{\lvert}{\rvert}
+  {#1 \delimsize\rangle\!\delimsize\langle #1}         % |a><a|  
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}
+  {#1 \delimsize| #2}                                  % <a|b>
+\DeclarePairedDelimiterX\ketbra[2]{\lvert}{\rvert}
+  {#1 \delimsize\rangle\!\delimsize\langle #2}         % |a><b|
+\DeclarePairedDelimiter\evo{\langle}{\rangle}          % <O> 
+\DeclarePairedDelimiterX\ev[2]{\langle}{\rangle}
+  {#2 \delimsize| #1 \delimsize| #2}                   % <a|O|a>
+\DeclarePairedDelimiterX\mel[3]{\langle}{\rangle}
+  {#1 \delimsize| #2 \delimsize| #3}                   % <a|O|b>
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}            % |a|
